@@ -1,0 +1,54 @@
+.zoomBOut {
+    width: 600px; 
+    height: 338px;
+    overflow: hidden;
+    position: relative;
+}
+.zoomBIn {
+    width: 100%;
+    height: 100%;
+    background-image: url("/src/assets/sun.gif");
+    background-position: center;
+    background-size: cover;
+    transition: transform ease 0.3s;
+  }
+.zoomBIn:hover {
+    transform: scale(1.2);
+  }
+
+.recycle{
+    width: 100%;
+    height: 100%;
+    background-image: url("/src/assets/Recycling.gif");
+    background-position: center;
+    background-size: cover;
+    transition: transform ease 0.3s;
+  }
+.recycle:hover {
+    transform: scale(1.2);
+  }
+
+.money{
+    width: 100%;
+    height: 100%;
+    background-image: url("/src/assets/Treasure.gif");
+    background-position: center;
+    background-size: cover;
+    transition: transform ease 0.3s;
+  }
+.money:hover {
+    transform: scale(1.2);
+  }
+
+@media(max-width:40em){
+  .featurette-heading{
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .text-muted{
+    font-size: 1rem;
+  }
+  .lead.aos-init.aos-animate{
+    font-size: 0.85rem;
+  }
+}

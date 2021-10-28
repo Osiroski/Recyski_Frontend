@@ -1,0 +1,92 @@
+body {
+  margin: 0px 10px 0 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgba(2, 129, 248, 0.788);
+  background-image: url('/src/assets/drawing.jpg');
+  
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.ml-auto{
+  margin-left: auto;
+
+}
+
+.mr-2{
+  margin-right:15px ;
+}
+.fw-2{
+  font-size:20px ;
+
+}
+.divider{
+  margin: 10px;
+}
+.fs-m{
+  font-size: medium;
+}
+
+.b-example-divider {
+  height: .5rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  border-radius: 5px;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+@media (min-width: 992px) {
+  .rounded-lg-3 { border-radius: .3rem; }
+}
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+.counter-count{
+    font-size: 48px;
+    font-weight: 400;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+  color:steelblue;
+
+}
+.form-error {
+  font-size: 13px;
+  color: red;
+  margin: 3px auto 0px 0px;
+  }

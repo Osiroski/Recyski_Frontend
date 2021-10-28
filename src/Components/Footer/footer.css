@@ -1,0 +1,11 @@
+@media(max-width:40em){
+    #contactList{
+        font-size: 0.5rem;
+    }
+    #footer{
+        margin-left: 1px;
+    }
+    .h5,h5{
+        font-size: 1rem;
+    }
+}

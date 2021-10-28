@@ -1,0 +1,38 @@
+@media(max-width: 40em){
+    #username{
+        font-size: 1rem;
+    }
+    #basic-addon1{
+    min-height: calc(1.5em + (.5rem + 2px));
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    border-radius: .2rem}
+    #emailId,#floatingPassword,#phone,#floatingAddress,#floatingLocation{
+        min-height: calc(1.5em + (.5rem + 2px));
+        padding: .25rem .5rem;
+        font-size: .875rem;
+        border-radius: .2rem;
+        height:2.5rem;}
+    .form-floating>label{
+        padding: 0.5rem 0.75rem;
+    }
+    .input-group-text{
+        font-size: 0.875rem;
+    }
+    .row{
+        --bs-gutter-x: .5rem;
+    }
+    .btn-close,#uploadImage{
+        font-size: 0.5rem;
+    }
+    #exampleModalCenteredScrollableTitle{
+        font-size: 0.75rem;
+    }
+    .rounded-circle{
+        width: 80px;
+        height: 80px;
+    }
+    #username1,#firstname,#lastname,#email,#password,#password2{
+        height: calc(2.5rem + 2px);
+    }
+}

@@ -1,0 +1,101 @@
+
+  /* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 42rem;
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 42rem;
+  }
+  
+  
+  /* MARKETING Cards CONTENT
+  -------------------------------------------------- */
+
+  .carde {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+    box-shadow: -10px 5px 15px 15px rgb(0 0 0 / 50%);
+} 
+@media (max-width: 40em) {
+  /* Bump up size of carousel content */
+  #carouselHead1{
+    font-size: 1.5rem;
+  }
+  #carouselHead2{
+    font-size: 1.5rem;
+  }
+  #carouselHead3{
+    font-size: 1.5rem;
+  }
+  .carousel-item{
+    height: 30rem;
+  }
+  #card1 {
+    height: 10rem;
+    border-radius: 0.5rem;
+}
+  .card-title.aos-init.aos-animate{
+    font-size: 1rem;
+  }
+  .btn.btn-outline-info.aos-init.aos-animate{
+    font-size: 0.75rem;
+  }
+  .text-muted{
+    font-size: 0.75rem;
+  }
+  .pt-5.mt-5.mb-4.display-6.lh-1.fw-bold{
+    font-size: calc(1rem + 1vw);
+    padding-top: 1rem!important;
+    margin-top: 1rem!important;
+  }
+  #card2 {
+    width: 100%;
+    border-radius: 0.5rem!important;
+}
+#goal1,#goal2,#goal3{
+  font-size: 0.85rem;
+}
+.accordion-body{
+  font-size: 0.75rem;
+}
+#brand1,#brand2,#brand3{
+  height: 50%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.display-4.text-center{
+  font-size: 1.25rem;
+}
+.card-header.display-6{
+  font-size: 1.25rem;
+}
+#carouselButton1,#carouselButton2,#carouselButton3{
+  padding: .25rem .5rem;
+  font-size: .875rem;
+  border-radius: .2rem;
+}
+}

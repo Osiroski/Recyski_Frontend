@@ -1,0 +1,60 @@
+.navshadow{
+    box-shadow: -10px 5px 15px 15px rgb(0 0 0 / 50%);
+  
+  }
+.header-link-active {
+    border-left: #1641cf solid 2px;
+    }
+
+@media (max-width: 40em) {
+  .navbar{
+    padding-top: 0;
+    padding-bottom:0;
+    height: 2.5rem;
+  }
+  .navbar-brand{
+    font-size: 0.85rem;
+  }
+  .navbar-toggler {
+    font-size: 0.85rem;
+  }
+  .btn.active{
+    font-size: 0.75rem;
+  }
+  .nav-link.dropdown-toggle.btn.btn-outline-sccuess{
+    font-size: 0.75rem;
+  }
+  .dropdown-header{
+    font-size: 0.75rem;
+  }
+  .dropdown-item{
+    font-size: small;
+  }
+  .display-4.fw-bold.lh-1{
+    font-size: calc(1rem + 1vw);
+
+  }
+  .lead{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .p-3.bg-light{
+    padding:0;
+  }
+  .blockquote{
+    font-size: 0.75rem;
+  }
+  .blockquote-footer {
+    font-size: 0.75rem;
+  }
+  .px-4.me-md-2.fw-bold.btn.btn-outline-primary.btn-lg{
+    font-size: medium;
+  }
+  .px-4.fw-bold.btn.btn-outline-secondary.btn-lg{
+    font-size: medium;
+  }
+  .rounded-lg-3{
+    width: 70%;
+  }
+
+}
