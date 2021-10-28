@@ -7,7 +7,7 @@ import axios from "axios";
 // login(): POST {username, password} & save token to Local Storage
 // logout(): remove token from Local Storage
 
-const API_URL = "http://localhost:8000/";
+const API_URL = 'https://recyskiapi.herokuapp.com/';
 
 const register = async (
       username: string,
