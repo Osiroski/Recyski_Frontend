@@ -6,17 +6,28 @@
     border-left: #1641cf solid 2px;
     }
 
+@media(max-width:768px){
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+  }
+  .navbar .navbar-collapse {
+    text-align: center;
+}
+
 @media (max-width: 40em) {
   .navbar{
     padding-top: 0;
     padding-bottom:0;
-    height: 2.5rem;
+    margin-top: 10px;
   }
   .navbar-brand{
     font-size: 0.85rem;
   }
   .navbar-toggler {
     font-size: 0.85rem;
+  }
+  
   }
   .btn.active{
     font-size: 0.75rem;
