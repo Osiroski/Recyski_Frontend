@@ -1,46 +1,41 @@
-import { Image } from 'react-bootstrap'
+import { Image,Carousel } from 'react-bootstrap'
 import bamboo from '../../assets/bamboo.jpg'
 import plastic from '../../assets/kenyan.jpg'
 import bottles from '../../assets/plasticbottles.jpg'
-const Carousel = () => {
+const Carousels = () => {
     return (
-        <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
-            <div className="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-label="Slide 1" aria-current="true"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" className=""></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" className=""></button>
-            </div>
+        <Carousel id="myCarousel" data-bs-ride="carousel" controls>
             <div className="carousel-inner">
-                <div className="carousel-item active">
+                <Carousel.Item className="active" interval={4000} >
                 <img alt="" src={bamboo}/>
                     <div className="container">
-                        <div className="carousel-caption text-start">
+                        <Carousel.Caption className=" text-start">
                             <h1 id="carouselHead1">Restore The Environment 🌳</h1>
                             <h6>Recyski is the first Digital Recycling trading Platform in East Africa.</h6>
                             <p><a id='carouselButton1' className="btn btn-lg btn-success" href="/register">Sign up today</a></p>
-                        </div>
+                        </Carousel.Caption>
                     </div>
-                </div>
-                <div className="carousel-item">
+                </Carousel.Item>
+                <Carousel.Item interval={3000} >
                 <img alt="" src={plastic}/>
                     <div className="container">
-                        <div className="carousel-caption">
+                        <Carousel.Caption>
                             <h1 id="carouselHead2">Create value out of trash </h1>
                             <h6>♻ Simply put, we pay you to recycle.</h6>
                             <p><a id='carouselButton2' className="btn btn-lg btn-dark" href="#LearnMore">Learn more</a></p>
-                        </div>
+                        </Carousel.Caption>
                     </div>
-                </div>
-                <div className="carousel-item">
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
                 <Image alt="" src={bottles}/>
                     <div className="container">
-                        <div className="carousel-caption text-end">
+                        <Carousel.Caption className=" text-end">
                             <h1 id="carouselHead3">Take part in the UN SDGs ☮</h1>
                             <h6>💦 Some representative placeholder content for the third slide of this carousel.</h6>
                             <p><a id='carouselButton3' className="btn btn-lg btn-info" href="#goals">Our Targets</a></p>
-                        </div>
+                        </Carousel.Caption>
                     </div>
-                </div>
+                </Carousel.Item >
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -50,8 +45,8 @@ const Carousel = () => {
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Next</span>
             </button>
-        </div>
+        </Carousel>
     )
 }
 
-export default Carousel
+export default Carousels

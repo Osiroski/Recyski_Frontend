@@ -22,7 +22,7 @@ const Navigation = () => {
                     <span className="navbar-toggler-icon"></span>
                 </NavbarToggle>
                 <NavbarCollapse className="collapse bg-light" id="navbarSupportedContent">
-                    <Nav className="me-auto ml-auto mb-2 mb-lg-0 justify-contnet-center">
+                    <Nav className="me-auto ml-auto mb-2 mb-lg-0 justify-content-center">
                         <NavItem className=" mr-2">
                             <NavLink className="btn active" aria-current="page" to="/" >Home</NavLink>
                         </NavItem>
@@ -54,7 +54,6 @@ const Navigation = () => {
                             <NavLink className="btn btn-outline-info me-2" to="/login" >Sign in</NavLink>
                             <NavLink className="btn btn-outline-success me-2 fw-2" to="/register">Register</NavLink>
                         </div>
-
                     }
                 </NavbarCollapse>
             </Container>

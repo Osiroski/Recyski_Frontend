@@ -28,15 +28,8 @@
   /* MARKETING Cards CONTENT
   -------------------------------------------------- */
 
-  .carde {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border-radius: .25rem;
+  .about-card {
+    border: 0;
     box-shadow: -10px 5px 15px 15px rgb(0 0 0 / 50%);
 } 
 @media (max-width: 40em) {
