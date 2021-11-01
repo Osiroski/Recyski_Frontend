@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Card, Container, Row, Col} from "react-bootstrap";
 import AOS from 'aos';
 import './cards.css'
 
@@ -9,10 +10,10 @@ const Cards = () => {
         });
     }, []);
     return (
-        <div className="container-fluid" id="custom-cards">
-            <div className="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-2" >
-                <div className="col" data-aos="flip-left" data-aos-easing="ease-out-cubic">
-                    <div className="card card-cover h-100 overflow-hidden text-white card-1 rounded-5 shadow-lg" >
+        <Container fluid  id="custom-cards">
+            <Row className="row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-2" >
+                <Col data-aos="flip-left" data-aos-easing="ease-out-cubic">
+                    <Card className="card-cover h-100 overflow-hidden text-white card-1 rounded-5 shadow-lg" >
                         <div className="d-flex flex-column h-100 p-2 pb-3 text-white text-shadow-1">
                             <h2 className="pt-5 display-6 lh-1 fw-bold">Plastic Bottle 🍾 </h2>
                             <h2 className=" mb-2 display-6 lh-1 fw-bold"> Ksh. 3 </h2>
@@ -24,10 +25,10 @@ const Cards = () => {
 
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <div className="col" data-aos="zoom-out-right">
-                    <div className="card card-cover h-100 overflow-hidden text-white card-2 rounded-5 shadow-lg" >
+                    </Card>
+                </Col>
+                <Col data-aos="zoom-out-right">
+                    <Card className="card-cover h-100 overflow-hidden text-white card-2 rounded-5 shadow-lg" >
                         <div className="d-flex flex-column h-100 p-2 pb-3 text-white text-shadow-1">
                             <h2 className="pt-5 mb-2 display-6 lh-1 fw-bold">Scrap metal</h2>
                             <h2 className=" mb-2 display-6 lh-1 fw-bold"> Ksh.20 per kilo </h2>
@@ -39,10 +40,10 @@ const Cards = () => {
 
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <div className="col" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
-                    <div className="card card-cover h-100 overflow-hidden text-white card-3 rounded-5 shadow-lg" >
+                    </Card>
+                </Col>
+                <Col data-aos="fade-left" data-aos-anchor-placement="center-bottom">
+                    <Card className="card-cover h-100 overflow-hidden text-white card-3 rounded-5 shadow-lg" >
                         <div className="d-flex flex-column h-100 p-2 pb-3 text-white text-shadow-1">
                             <h2 className="pt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
                             <ul className="d-flex list-unstyled mt-auto">
@@ -54,10 +55,10 @@ const Cards = () => {
 
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <div className="col" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
-                    <div className="card card-cover h-100 overflow-hidden text-white card-4 rounded-5 shadow-lg" >
+                    </Card>
+                </Col>
+                <Col data-aos="fade-right" data-aos-anchor-placement="center-bottom">
+                    <Card className="card-cover h-100 overflow-hidden text-white card-4 rounded-5 shadow-lg" >
                         <div className="d-flex flex-column h-100 p-2 pb-3 text-shadow-1">
                             <h2 className="pt-5 mb-4 display-6 lh-1 fw-bold">Compost and Vegetable waste</h2>
                             <ul className="d-flex list-unstyled mt-auto">
@@ -67,10 +68,10 @@ const Cards = () => {
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </Card>
+                </Col>
+            </Row>
+        </Container>
 
     )
 }

@@ -29,4 +29,7 @@
   .col-lg-10.fs-4{
     font-size: 0.7rem!important;
   }
+  .text-center>.btn.btn-primary{
+    font-size: medium;
+  }
 }

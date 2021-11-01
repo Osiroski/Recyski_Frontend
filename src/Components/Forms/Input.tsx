@@ -7,11 +7,12 @@ import { useFormContext } from 'react-hook-form';
 export type Input = {
   label: string
   name: string
-  type?: 'text' | 'email' | 'password'
+  type?: 'text' | 'email' | 'password' | 'phone'
+  disabled?:boolean
   autoplace: {autoComplete:string,placeholder:string}
 }
 
-export const Inputs = ({label,name,type,autoplace}: Input) => {
+export const Inputs = ({label,name,type,autoplace,disabled}: Input) => {
   const { register, formState: { errors } } = useFormContext()
 
   return (
@@ -20,6 +21,7 @@ export const Inputs = ({label,name,type,autoplace}: Input) => {
         <Form.Control
             
             className={`${errors[name] ? 'is-invalid' : ''}`}
+            disabled={disabled}
             type={type}
             autoComplete={autoplace.autoComplete}
             placeholder={autoplace.placeholder}

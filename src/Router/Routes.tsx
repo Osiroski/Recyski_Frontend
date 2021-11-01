@@ -25,7 +25,7 @@ const Routes = () => {
                 <Route exact={true} path="/register" component={Register} />
                 <Route exact={true} path="/" component={App} />
                 <Route exact={true} path="/dashboard">
-                    {isLoggedin ? <Dashboard/>:<Redirect to='/login' />}
+                    {!isLoggedin ? <Dashboard/>:<Redirect to='/login' />}
                     </Route>
                 <Route exact={true} path="/about" component={About} />
                 <Route exact={true} path="/sales" component={Sales} />

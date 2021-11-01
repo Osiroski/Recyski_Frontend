@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { userLogin } from "../../redux/actions/actionCreators";
@@ -21,8 +22,8 @@ const Login = () => {
   }
 
   return (
-    <div className="container rounded-3 col-xl-12 col-xxl-12 mt-4 py-2 bg-light2">
-      <div className="row align-items-center g-lg-5 py-5">
+    <Container className="rounded-3 col-xl-12 col-xxl-12 mt-4 py-2 bg-light2">
+      <Row className="align-items-center g-lg-5 py-5">
         <div className="col-lg-7 text-center text-lg-start">
           <h1 className="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h1>
           <p className="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
@@ -41,15 +42,12 @@ const Login = () => {
               autoplace={{
                 autoComplete: 'new-password',
                 placeholder: 'Password'
-              }} />
-              
+              }} />   
             <Buttons>Sign In</Buttons>
-            
           </BasicForm>
-
         </div>
-      </div>
-    </div>
+      </Row>
+    </Container>
   )
 }
 export default Login

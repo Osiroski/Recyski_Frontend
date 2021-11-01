@@ -1,0 +1,5 @@
+@media (max-width: 40em) {
+    .fw-bold.btn.btn-outline-info.btn-sm{
+        font-weight: 300!important;
+    }
+}

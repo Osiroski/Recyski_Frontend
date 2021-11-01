@@ -3,9 +3,11 @@ import { faPenNib } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Image } from "react-bootstrap";
 import looks from '../../../assets/looks.jpg'
-// import { Forms } from "../../Forms/Forms";
-// import { minLength, required, validEmail } from "../../Forms/validators";
+import { BasicForm, Inputs } from "../../Forms";
 const Modal = () => {
+    const handleSubmit = (data: any) => {
+        console.log(data);
+    }
     return (
         <div className="modal fade" id="exampleModalCenteredScrollable" tabIndex={-1}
             aria-labelledby="exampleModalCenteredScrollableTitle" data-bs-backdrop="static" data-bs-keyboard="false"
@@ -21,26 +23,34 @@ const Modal = () => {
                             <div className="col-6">
                                 <Image src={looks} roundedCircle={true} width="160" height="160" />
                             </div>
-                            <div className="col-6">
+                            <div className="col-6 mt-3">
                                 <input type="file" id='uploadImage' className="form-control form-control-sm" aria-label="Small file input example" />
                             </div>
                         </div>
                         <div className="row mt-3">
-                        {/* <Forms defaultValues={{ name: "", email: "", password: "" }}
-                        validationRules={{
-                            email: [{ validator: required },{validator:validEmail}],
-                            firstname: { validator: required },
-                            lasttname: { validator: required },
-                            password: [{ validator: required }, {validator: minLength, arg: 8}],
-                            password2: [{ validator: required }, {validator: minLength, arg: 8}]
-                        }}>
-                        <Forms.Field name="username1" label="Username" type="Text" disabled={false}/>
-                        <Forms.Field name="firstname" label="First Name" type="Text" disabled={false}/>
-                        <Forms.Field name="lastname" label="Last Name" type="Text" disabled={false}/>
-                        <Forms.Field name="email" label="Your email address" type="Email" disabled={false}/>
-                        <Forms.Field name="password" label="Password" type="Password" auto-complete="new-password" disabled={false} />
-                        <Forms.Field name="password2" label="Confirm Password" type="Password" auto-complete="new-password" disabled={false}/>
-                    </Forms> */}
+                        <BasicForm onSubmit={handleSubmit} type={'login'} >
+                                        <div className='mb-3' id='emailId'>
+                                            <Inputs label={'Username'} name={'username'} type={'text'}
+                                                autoplace={{
+                                                    autoComplete: 'username',
+                                                    placeholder: 'username'
+                                                }} />
+                                        </div>
+                                        <div className='mt-4 mb-3' id='phone'>
+                                            <Inputs label={'Phone'} name={'phone'} type={'phone'}
+                                                autoplace={{
+                                                    autoComplete: 'phone',
+                                                    placeholder: 'Phone'
+                                                }} />
+                                        </div>
+                                        <div className='mb-3' id='floatingAddress'>
+                                            <Inputs label={'Location'} name={'location'} type={'text'}
+                                                autoplace={{
+                                                    autoComplete: 'location',
+                                                    placeholder: 'Location'
+                                                }} />
+                                        </div>
+                                    </BasicForm>
                         </div>
                     </div>
                     <div className="modal-footer">

@@ -6,14 +6,14 @@ import Header from './Header/Header'
 import Sidebar from './Sidebar/sidebar'
 import Illustration from "./Section/Illustration"
 import Seccards from "./Section/Seccards"
-import { faCalendar, faComments } from '@fortawesome/free-solid-svg-icons'
+import { faCalendar, faComments, faTachometerAlt } from '@fortawesome/free-solid-svg-icons'
+import { Container, Row } from 'react-bootstrap'
 
 const Dashboard = () => {
     return (
-        <div className="container-fluid">
-            <Header title="Dashboard" />
-
-            <div className="container-fluid">
+        <Container fluid >
+            <Header title="Dashboard" icon={faTachometerAlt}/>
+            <Container fluid>
                 <div className="row">
                     <Sidebar />
                     <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light2">
@@ -32,20 +32,18 @@ const Dashboard = () => {
                         </div>
                         <Cards />
                         <h2 className="my-5">Section title</h2>
-                        <div className="container-fluid">
-                            <div className="row">
+                        <Container fluid>
+                            <Row>
                             <Seccards title={"Earnings (monthly)"} digit={"$40,000"} icon={faCalendar} borderColor={'primary'} progressBar={false} />
-                            <Seccards title={"Pending Requets"} digit={"18"} icon={faComments} borderColor={"border-left-warning"} progressBar={false} />
-                            <Seccards title={"Tasks"} digit={"50%"} icon={faComments} borderColor={"border-left-success"} progressBar={true} />
-                            </div>
-                        </div>
+                            <Seccards title={"Pending Requets"} digit={"18"} icon={faComments} borderColor={"warning"} progressBar={false} />
+                            <Seccards title={"Tasks"} digit={"50%"} icon={faComments} borderColor={"success"} progressBar={true} />
+                            </Row>
+                        </Container>
                         <Illustration />
                     </main>
                 </div>
-            </div>
-        </div>
-
+            </Container>
+        </Container>
     )
 }
-
 export default Dashboard

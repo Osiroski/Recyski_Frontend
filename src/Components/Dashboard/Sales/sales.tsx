@@ -1,6 +1,6 @@
 
 import { faComments } from "@fortawesome/free-regular-svg-icons";
-import { faCalendar } from "@fortawesome/free-solid-svg-icons";
+import { faCalendar, faMoneyBillWave } from "@fortawesome/free-solid-svg-icons";
 import Header from "../Header/Header";
 import Seccards from "../Section/Seccards";
 import Sidebar from "../Sidebar/sidebar";
@@ -9,7 +9,7 @@ import Revenue from "./Revenue";
 
 const Sales = () => (
     <div className="container-fluid">
-        <Header title="Sales" />
+        <Header title="Sales" icon={faMoneyBillWave}/>
         <div className="container-fluid">
             <div className="row">
                 <Sidebar />

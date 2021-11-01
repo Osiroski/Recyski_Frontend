@@ -95,7 +95,6 @@ const LearnMore = () => {
           </Col>
         </Row>
       </div>
-      
       <Sdgaccordion />
       <Brands />
       <Modal className="fade" id="exampleModalDefault" 

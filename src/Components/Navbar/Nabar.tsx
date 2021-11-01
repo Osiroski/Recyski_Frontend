@@ -39,7 +39,7 @@ const Navigation = () => {
                             </Dropdown.Menu>
                         </Dropdown>
                         <NavItem className="mr-2">
-                            <NavLink className="btn" to="/" tabIndex={-1}>Get Started</NavLink>
+                            <NavLink className="btn" to="/register" tabIndex={-1}>Get Started</NavLink>
                             
                         </NavItem>
                     </Nav>
