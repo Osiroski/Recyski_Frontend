@@ -23,7 +23,7 @@ const LoginAlert = (props:IProps) => {
             <Alert.Heading >{props.message}</Alert.Heading>
             }
             {props.code===201 && 
-            <Alert.Heading >User {props.message}</Alert.Heading>
+            <Alert.Heading >{props.message}</Alert.Heading>
             }
             {props.code===201 && 
             <p>

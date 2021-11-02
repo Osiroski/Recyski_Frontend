@@ -19,9 +19,7 @@ const Routes = () => {
             <div>
                 
                 <Navigation/>
-                <Route exact={true} path="/login">
-                {isLoggedin ? <Dashboard/>:<Login/>}
-                </Route>
+                <Route exact={true} path="/login" component={Login} />
                 <Route exact={true} path="/register" component={Register} />
                 <Route exact={true} path="/" component={App} />
                 <Route exact={true} path="/dashboard">

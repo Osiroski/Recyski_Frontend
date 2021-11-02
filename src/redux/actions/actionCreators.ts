@@ -72,8 +72,7 @@ export const userRegister:
                 return dispatch(error(message.email,user.status));
             }
             if (user.status === 201) {
-                const message = user.statusText
-                dispatch(success(message,user.status))
+                dispatch(success('User Created',user.status))
                 return dispatch({
                     type: UserActionTypes.REGISTER,   
                 })

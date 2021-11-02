@@ -2,7 +2,7 @@ import Accordion from 'react-bootstrap/Accordion'
 const Sdgaccordion = () => {
     return (
         <div className="bd-example my-5">
-            <Accordion id="accordionExample">
+            <Accordion id="sdgGoals">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header >
                             <h4 id="goal1">SDG Goal #1</h4>

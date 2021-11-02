@@ -23,7 +23,7 @@ const register = async (
     first_name,
     last_name});
   if (response.data) {
-    return response;
+    return response.data;
   }
 }
 catch (error: any) {

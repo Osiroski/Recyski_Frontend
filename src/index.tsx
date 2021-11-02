@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Routes from './Router/Routes';
-import axios from 'axios';
 import { Provider } from 'react-redux'
 import { Store } from "redux";
 import store from "./redux/store/store";
@@ -14,8 +13,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 //...
 let persistor = persistStore(store);
 
-axios.defaults.baseURL = 'http://localhost:8000/';
-axios.defaults.headers.common['Authorization'] = 'Token' + localStorage.getItem('token');
+
 
 interface IProps {
   store: Store<IApplicationState>;

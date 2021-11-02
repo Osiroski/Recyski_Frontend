@@ -21,8 +21,8 @@ export const Welcomme: React.FC = () => {
                         </div>
 
                         <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                            <Button type="button" variant="outline-primary" size="lg" className="px-4 me-md-2 fw-bold">Learn how</Button>
-                            <Button type="button" variant="outline-secondary" size="lg" className="px-4 fw-bold">Goals</Button>
+                            <Button type="button" variant="outline-primary" size="lg" className="px-4 me-md-2 fw-bold" href='about'>Learn how</Button>
+                            <Button type="button" variant="outline-secondary" size="lg" className="px-4 fw-bold" href='about/#sdgGoals'>Goals</Button>
                         </div>
                     </div>
                     <div className="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">

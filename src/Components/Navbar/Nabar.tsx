@@ -6,14 +6,12 @@ import bamboo from '../../assets/bamboo.jpg'
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store/store';
 import './Navbar.css'
+import authService from '../../Services/auth.service';
 
 
 const Navigation = () => {
     const state = useSelector((state:RootState) => state.user)
-    const logout=()=> {
-        localStorage.clear();
-        window.location.href = '/';
-    }
+    
     return (
         <Navbar expand="lg" bg="light" className="rounded-3 navshadow">
             <Container fluid>
@@ -26,8 +24,8 @@ const Navigation = () => {
                         <NavItem className=" mr-2">
                             <NavLink className="btn active" aria-current="page" to="/" >Home</NavLink>
                         </NavItem>
-                        <Dropdown className="dropdown mr-2">
-                            <Dropdown.Toggle className="nav-link" variant="outline-sccuess" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="true">
+                        <Dropdown className="mr-2">
+                            <Dropdown.Toggle className="nav-link" variant="outline-sccuess" id="navbarDropdown">
                                 Learn More
                             </Dropdown.Toggle>
                             <Dropdown.Menu align={'start'} aria-labelledby="navbarDropdown">
@@ -39,19 +37,18 @@ const Navigation = () => {
                             </Dropdown.Menu>
                         </Dropdown>
                         <NavItem className="mr-2">
-                            <NavLink className="btn" to="/register" tabIndex={-1}>Get Started</NavLink>
-                            
+                            <NavLink className="btn" to="/login" tabIndex={-1}>Get Started</NavLink>             
                         </NavItem>
                     </Nav>
                     {state.isLoggedin ?
                         <div className="d-flex mb-2 justify-content-center">
                             <Image alt="" className='mr-2' src={bamboo} roundedCircle width={'70'} height={'70'} />
-                            <NavLink className="btn btn-lg btn-outline-info me-2" to="/login" onClick={logout}>Log out</NavLink>
+                            <NavLink className="btn btn-lg btn-outline-info me-2" to="/login" onClick={authService.logout}>Log out</NavLink>
                             
                         </div>
                         :
                         <div className="d-flex mb-2 justify-content-center">
-                            <NavLink className="btn btn-outline-info me-2" to="/login" >Sign in</NavLink>
+                            <NavLink className="btn btn-outline-info me-2" to="/login" >Sign In</NavLink>
                             <NavLink className="btn btn-outline-success me-2 fw-2" to="/register">Register</NavLink>
                         </div>
                     }
