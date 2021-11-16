@@ -12,9 +12,6 @@ import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 //...
 let persistor = persistStore(store);
-
-
-
 interface IProps {
   store: Store<IApplicationState>;
 }
@@ -28,7 +25,6 @@ const Root: React.FC<IProps> = props => {
     </Provider>
   );
 };
-
 ReactDOM.render(
   <Root store={store} />, 
   document.getElementById('root')

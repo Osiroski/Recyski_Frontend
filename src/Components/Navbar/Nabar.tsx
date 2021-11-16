@@ -1,16 +1,21 @@
-import { Container, Navbar, NavItem,Image, Nav, Dropdown } from 'react-bootstrap'
+import { Container, Navbar, NavItem,Image, Nav, Dropdown, Button } from 'react-bootstrap'
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
 import { NavLink } from 'react-router-dom';
-import bamboo from '../../assets/bamboo.jpg'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store/store';
 import './Navbar.css'
-import authService from '../../Services/auth.service';
+import { userLogout } from '../../redux/actions/actionCreators';
+import userService from '../../Services/user.service';
 
 
 const Navigation = () => {
+    const dispatch = useDispatch()
     const state = useSelector((state:RootState) => state.user)
+    const profile =useSelector((state: RootState) => state.profile);
+    const handleLogout = ()=> {
+        dispatch(userLogout())
+      }
     
     return (
         <Navbar expand="lg" bg="light" className="rounded-3 navshadow">
@@ -36,14 +41,21 @@ const Navigation = () => {
                                 <Dropdown.Item className=" fs-m" href="/">Something else here</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
+                        {!state.isLoggedin ?
                         <NavItem className="mr-2">
                             <NavLink className="btn" to="/login" tabIndex={-1}>Get Started</NavLink>             
                         </NavItem>
+                        :
+                        <NavItem className="mr-2">
+                            <NavLink className="btn" to="/dashboard" tabIndex={-1}>Dashboard</NavLink>             
+                        </NavItem>
+                        
+                        }
                     </Nav>
                     {state.isLoggedin ?
                         <div className="d-flex mb-2 justify-content-center">
-                            <Image alt="" className='mr-2' src={bamboo} roundedCircle width={'70'} height={'70'} />
-                            <NavLink className="btn btn-lg btn-outline-info me-2" to="/login" onClick={authService.logout}>Log out</NavLink>
+                            <Image id='icon' className='mr-2' src={userService.getProfileImage(profile.profile_image)} roundedCircle width={'70'} height={'70'} />
+                            <Button size='sm' variant='outline-info' className="me-2" onClick={handleLogout}>Log out</Button>
                             
                         </div>
                         :

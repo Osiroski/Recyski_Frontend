@@ -28,12 +28,12 @@ const Sales = () => (
                         </div>
                     </div>
                     <div className="container-fluid">
-                        <div className="row">
+                    <div className="row">
                             <Seccards title={"Earnings (monthly)"} digit={"$40,000"} icon={faCalendar} borderColor={"border-left-primary"} progressBar={false} />
                             <Seccards title={"Pending Requets"} digit={"18"} icon={faComments} borderColor={"border-left-warning"} progressBar={false} />
                             <Seccards title={"Tasks"} digit={"50%"} icon={faComments} borderColor={"border-left-success"} progressBar={true} />
                         </div>
-                        <Revenue/>
+                    <Revenue/> 
                     </div>
                     
                 </main>

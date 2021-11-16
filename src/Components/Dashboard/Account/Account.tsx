@@ -5,10 +5,22 @@ import Sidebar from "../Sidebar/sidebar";
 
 import ProfileInfo from "./profile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoneyCheckAlt, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import {  faMoneyCheckAlt, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import './account.css';
 
+import { Redirect } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../redux/store/store";
+
+
 const Profile = () => {
+    const isLoggedin = useSelector((state: RootState) => state.user.isLoggedin)
+    if (isLoggedin===false){
+        return (
+          <Redirect to='login' />
+        )
+      }
+    
     return (
         <Container fluid className="container-fluid">
             <Header title="Profile" icon={faUserCircle} />

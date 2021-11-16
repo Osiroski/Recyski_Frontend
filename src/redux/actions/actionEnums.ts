@@ -6,4 +6,8 @@ export enum UserActionTypes {
     ERROR = "USER/ERROR",
     LOGOUT = "USER/LOGOUT"
     }
-    
+export enum ProfileActionTypes {
+        LOGIN = "PROFILE/LOGIN",
+        LOGOUT = "PROFILE/LOGOUT",
+        UPDATE="PROFILE/UPDATE"
+        }

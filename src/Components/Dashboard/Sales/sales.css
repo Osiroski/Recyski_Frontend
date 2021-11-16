@@ -1,0 +1,13 @@
+@media(max-width:40em){
+    h5#sellModalLabel.modal-title,
+    #unit,
+    #units.form-control,
+    #unitInput,
+    #amountInput,
+    #amount.form-control{
+        font-size: 0.75rem;
+    }
+    button.btn.btn-sm.btn-outline-info{
+        width: 100%;
+    }
+}

@@ -1,4 +1,5 @@
 import React, { ChangeEvent } from "react"
+import  './sales.css'
 
 
 
@@ -33,16 +34,16 @@ const SaleModal = (props: IProps) => {
                     </div>
                     <div className="modal-body">
                         <form className="row g-2">
-                            <div className="h6 mt-3 mb-3">
+                            <div className="h6 mt-3 mb-3" id='unit'>
                                 {props.unit}
                             </div>
-                            <div className="col-md-6 mb-3">
+                            <div className="col-md-6 mb-3" id='unitInput'>
                                 <label htmlFor="units" className="form-label">Units</label>
                                 <div className="input-group has-validation">
                                     <input type="number" className="form-control " id="units" aria-describedby="inputGroupPrepend1" onChange={handleChange} />
                                 </div>
                             </div>
-                            <div className="col-md-6 mb-3">
+                            <div className="col-md-6 mb-3" id="amountInput">
                                 <label htmlFor="amount" className="form-label">Amount</label>
                                 <div className="input-group has-validation">
                                     <span className="input-group-text" id="inputGroupPrepend2">$</span>
@@ -51,12 +52,12 @@ const SaleModal = (props: IProps) => {
                                 </div>
                             </div>
                             <div className="col-12">
-                                <button className="btn btn-outline-info" type="submit">Submit form</button>
+                                <button className="btn btn-sm btn-outline-info" type="submit">Place Order</button>
                             </div>
                         </form>
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" className="btn btn-sm btn-danger" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,7 @@
 .card-1{
     background-image: url('/src/assets//bamboo.jpg');
+    border-color: rgba(0, 0, 0, 0.247);
+    box-shadow: 2px;
 }
 .card-2{
     background-image: url('/src/assets/euro.jpg');
@@ -8,7 +10,11 @@
 }
 .card-3{
     background-image: url('/src/assets/plastic.jpg');
+    border-color: rgba(0, 0, 0, 0.247);
+    box-shadow: 2px;
 }
 .card-4{
     background-image: url('/src/assets/kenyan.jpg');
+    border-color: rgba(0, 0, 0, 0.247);
+    box-shadow: 2px;
 }

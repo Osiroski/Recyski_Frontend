@@ -1,9 +1,11 @@
-import { UserActionTypes } from "./actionEnums";
+import { ProfileActionTypes, UserActionTypes } from "./actionEnums";
 
 export interface UsersLoginAction {
     type: UserActionTypes.LOGIN,
     user:UserState
     }
+
+
 export interface UsersRegisterAction {
     type: UserActionTypes.REGISTER
 
@@ -25,6 +27,17 @@ export interface UsersLogoutAction {
     type: UserActionTypes.LOGOUT
 }
 
+export interface ProfileLoginAction {
+    type: ProfileActionTypes.LOGIN,
+    profile:ProfileState
+    }
+export interface ProfileLogoutAction {
+        type: ProfileActionTypes.LOGOUT
+    }
+export interface ProfileUpdateAction {
+        type: ProfileActionTypes.UPDATE,
+        profile:ProfileState
+    }
 export interface UserState {
     id: number;
     userLoading: boolean;
@@ -34,9 +47,21 @@ export interface UserState {
     last_name:string,
     first_name:string;
     token:string;
-    active:boolean
+    active:boolean;
+    
     }
 
+export interface ProfileState {
+    id: number;
+    profile_image: string;
+    bio: string;
+    location: string;
+    birth_date: string;
+    phoneNumber: string;
+    points: number;
+    level: string;
+    user: number;
+        }
 export type UserActions =
 | UsersLoginAction
 | UsersLoadingAction
@@ -45,3 +70,7 @@ export type UserActions =
 | UsersSuccessAction
 | UsersLogoutAction
 
+export type ProfileActions =
+| ProfileLoginAction
+| ProfileLogoutAction
+| ProfileUpdateAction

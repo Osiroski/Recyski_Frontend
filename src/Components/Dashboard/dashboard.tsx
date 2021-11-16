@@ -30,7 +30,11 @@ const Dashboard = () => {
                                 </button>
                             </div>
                         </div>
-                        <Cards />
+                        <Container fluid id="custom-cards">
+                            <Row className="row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-2" >
+                        <Cards dataAos={'flip-left'} dataAosEasing={'ease-out-cubic'} item={'Plastic Bottle 🍾'} price={'Ksh.3'} location={'Kayole'} amount={10} date={"2021-11-08"}/>
+                        </Row>
+                        </Container>
                         <h2 className="my-5">Section title</h2>
                         <Container fluid>
                             <Row>

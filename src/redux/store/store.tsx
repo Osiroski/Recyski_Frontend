@@ -1,15 +1,17 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit'
 import thunk from "redux-thunk";
 import { userReducer } from "../reducers/userReducer";
-import { UserState } from "../actions/actionsTypes";
+import { ProfileState, UserState } from "../actions/actionsTypes";
 
 import storage from 'redux-persist/lib/storage'
 import { persistReducer } from 'redux-persist';
 import { ErrorState, messReducer } from '../reducers/messageReducer';
+import { profileReducer } from '../reducers/profileReducer';
 
 export interface IApplicationState {
+  profile:ProfileState;
   user: UserState;
-  messages:ErrorState
+  messages:ErrorState;
 }
 const persistConfig = {
   key: 'root',
@@ -17,7 +19,8 @@ const persistConfig = {
 }
 const rootReducer = combineReducers<IApplicationState>({
   user: userReducer,
-  messages: messReducer
+  messages: messReducer,
+  profile:profileReducer
 });
 
 

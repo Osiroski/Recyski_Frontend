@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 // Authentication service
 // The service uses Axios for HTTP requests and Local Storage for user information & Access Tokens.
 // It provides following important functions:
@@ -38,7 +39,7 @@ const login = async (email: string, password: string) => {
     const response = await axios.post(API_URL + "login/", { email, password, });
     if (response.data.token) {
       localStorage.setItem("user", JSON.stringify(response.data));
-      return response.data;
+      return response;
     }
   }
   catch (error: any) {
@@ -47,8 +48,17 @@ const login = async (email: string, password: string) => {
     }
   }
 };
-const logout = () => {
-  localStorage.removeItem("user");
+const logout = async () => {
+  try {
+    const response = await axios.get(API_URL + "logout/");
+      return response;
+  }
+  catch (error: any) {
+    if (error.request) {
+      return error.request;
+    }
+  }
+
 };
 
 const authService = {

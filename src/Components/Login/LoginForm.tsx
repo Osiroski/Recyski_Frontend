@@ -4,16 +4,18 @@ import { Container, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Redirect } from 'react-router';
-import { userLogin } from "../../redux/actions/actionCreators";
+import { userLogin, userProfile } from "../../redux/actions/actionCreators";
 import { RootState } from '../../redux/store/store';
 import { Buttons, Inputs, BasicForm} from '../Forms';
 import './login.css';
 import LoginAlert from './loginAlert';
 
+
+
 const Login = () => {
   const dispatch = useDispatch()
   const message = useSelector((state: RootState) => state.messages.message)
-  const isLoggedin = useSelector((state: RootState) => state.user.isLoggedin)
+  const user = useSelector((state: RootState) => state.user)
   const code = useSelector((state: RootState) => state.messages.code)
   const handleSubmit = (data:any) => {
     dispatch(
@@ -23,13 +25,12 @@ const Login = () => {
         )
         )
   }
-  if (isLoggedin){
+  if (user.isLoggedin){
+    dispatch(userProfile(user.id));
     return (
       <Redirect to='dashboard' />
     )
   }
-
-
   return (
     <Container className="rounded-3 col-xl-12 col-xxl-12 mt-4 py-2 bg-light2">
       <Row className="align-items-center g-lg-5 py-5">

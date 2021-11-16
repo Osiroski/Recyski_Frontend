@@ -29,8 +29,8 @@
         font-size: 0.75rem;
     }
     .rounded-circle{
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
     #username1,#firstname,#lastname,#email,#password,#password2{
         height: calc(2.5rem + 2px);

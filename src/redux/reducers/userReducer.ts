@@ -3,7 +3,7 @@ import { UserActionTypes } from "../actions/actionEnums";
 import { UserActions, UserState } from "../actions/actionsTypes";
 
 const initialUserState: UserState = {
-    active:false,
+    active: false,
     userLoading: false,
     isLoggedin: false,
     username: "",
@@ -12,6 +12,7 @@ const initialUserState: UserState = {
     first_name: "",
     token: "",
     id: 0,
+
 };
 export const userReducer: Reducer<UserState, UserActions> = (
     state = initialUserState,
@@ -22,33 +23,47 @@ export const userReducer: Reducer<UserState, UserActions> = (
         case UserActionTypes.LOADING: {
             return {
                 ...state,
-                userLoading: true
+                userLoading: true,
+                isLoggedin: false
             };
         }
         case UserActionTypes.LOGIN: {
             return {
-                ...state,
                 userLoading: false,
-                username:action.user.username,
+                username: action.user.username,
                 email: action.user.email,
                 last_name: action.user.last_name,
                 first_name: action.user.first_name,
                 token: action.user.token,
                 id: action.user.id,
-                isLoggedin:true
+                active: true,
+                isLoggedin: true
+            };
+        }
+        case UserActionTypes.LOGOUT: {
+            return {
+                active: false,
+                userLoading: false,
+                isLoggedin: false,
+                username: "",
+                email: "",
+                last_name: "",
+                first_name: "",
+                token: "",
+                id: 0,
             };
         }
         case UserActionTypes.REGISTER: {
             return {
                 ...state,
                 userLoading: false,
-                isLoggedin:false,
+                isLoggedin: false,
             };
         }
         case UserActionTypes.SUCCESS: {
             return {
                 ...state,
-                isLoggedin: true
+                isLoggedin: false
             };
         }
         case UserActionTypes.ERROR: {
