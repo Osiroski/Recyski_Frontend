@@ -1,4 +1,4 @@
-import { faInfoCircle, faLocationArrow, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faLocationArrow, faUser } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ChangeEvent, useEffect, useState } from "react"
 import { Modal, Button,Row ,Col,Form, InputGroup, FormControl } from "react-bootstrap"
